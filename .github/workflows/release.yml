@@ -1,6 +1,7 @@
 name: Release
 
 on:
+  workflow_dispatch:
   push:
     tags: ['v*']
 
@@ -26,3 +27,4 @@ jobs:
         with:
           files: build/app/outputs/flutter-apk/app-release.apk
           generate_release_notes: true
+          tag_name: ${{ github.ref_type == 'tag' && github.ref_name || format('v0.0.{0}', github.run_number) }}
