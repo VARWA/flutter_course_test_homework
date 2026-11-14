@@ -86,7 +86,7 @@ class _Divider extends StatelessWidget {
 }
 
 class _AddTodoFloatingActionButton extends StatelessWidget {
-  const _AddTodoFloatingActionButton({super.key});
+  const _AddTodoFloatingActionButton();
 
   @override
   Widget build(BuildContext context) {
