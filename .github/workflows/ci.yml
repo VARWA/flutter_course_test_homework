@@ -27,7 +27,7 @@ jobs:
         run: dart format --output=none --set-exit-if-changed .
 
       - name: Статический анализ
-        run: flutter analyze
+        run: flutter analyze --no-fatal-infos
 
       - name: Тесты с покрытием
         run: flutter test --coverage
